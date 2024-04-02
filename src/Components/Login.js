@@ -1,21 +1,34 @@
-// LogIn.jsx
-import React from 'react';
-import '../Asserts/Cssfiles/Login.css';
-
-const Login = ({ onClose }) => {
-  return (
-    <div className='LogInPopup' id='LogInPopup'>
-      <div className="form">
-        <p className="title">Log In</p>
+import '../Asserts/Cssfiles/login.css'
+import { Link } from 'react-router-dom';
+import Home from './Home';
+function Login()
+{
+    return (
         
-        <input type="text" id="username" placeholder="Enter Username" className="input" required />
-        <input type="password" id="password" placeholder="Enter Your Password" className="input" required />
-        <button type="submit" className="btn" onClick={onClose}>
-          Log In
-        </button>
-      </div>
-    </div>
-  );
-};
-
+            <div class="main">  	
+                <input type="checkbox" id="chk" aria-hidden="true"/>
+        
+                    <div class="signup">
+                        <form>
+                            <label for="chk" aria-hidden="true">Sign up</label>
+                            <input type="text" name="txt" placeholder="User name" required=""/>
+                            <input type="email" name="email" placeholder="Email" required=""/>
+                            <input type="password" name="pswd" placeholder="Password" required=""/>
+                            <button>Sign up</button>
+                        </form>
+                    </div>
+        
+                    <div class="login">
+                        <form>
+                            <label for="chk" aria-hidden="true">Login</label>
+                            <input type="email" name="email" placeholder="Email" required=""/>
+                            <input type="password" name="pswd" placeholder="Password" required=""/>
+                            <Link to ="home">
+                            <button>Login</button>
+                            </Link>
+                        </form>
+                    </div>
+            </div>
+    )
+}
 export default Login;

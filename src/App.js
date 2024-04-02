@@ -3,8 +3,8 @@ import Caricature from './Pages/Caricature';
 import Home from './Components/Home'
 import HomeD from './Pages/homedecor';
 import Texture from './Pages/Texture';
-import LogIn from './Components/Login';
 import Mugs from './Pages/Mugs';
+import Login from './Components/Login';
 import Resign from './Pages/resign';
 import { Route, Routes } from 'react-router-dom'
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         {/* <Header/> */}
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<LogIn />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/frames' element={<Frames/>}/>
         <Route path='/cari' element={<Caricature/>}/>
         <Route path='/homed' element={<HomeD/>}/>
